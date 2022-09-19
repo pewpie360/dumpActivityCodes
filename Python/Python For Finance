@@ -1,1 +1,42 @@
+#!pip install matplotlib
+import numpy as np
+import pandas as pd
+import matplotlib.pylab as plt
+from numpy import random
 
+sample_arr1 = [1, 2, 3, 4, 5]
+np_sample_arr1 = np.array(sample_arr1)
+np_sample_arr1
+
+#multi dimentional list
+multi_list1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+np_multi_list1 = np.array(multi_list1)
+np_multi_list1
+
+#creating array with a range of numbers
+np.arange(1, 10, 3)
+
+#generating floats
+np.linspace(0, 4, 5)
+
+#generate array of zeros
+np.zeros(5)
+
+#multi dimentional zero array
+np.zeros((3, 3))
+
+#identify size of an array
+np_multi_list1.size
+
+#identify data type of array
+np_multi_list1.dtype
+
+#creating direct array
+dir_arr = np.array([1, 3, 4, 5, 6])
+dir_arr
+
+#generate random arrays
+np.random.randint(2, 10, size = (2, 4))
+
+#know the information and samples 
+np.random.randint?
