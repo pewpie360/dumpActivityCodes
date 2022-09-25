@@ -1,0 +1,59 @@
+package learningJava;
+import java.util.*;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		//Without User input
+		/*
+		 Person myObject = new Person();
+		
+		String name = "Krunxx";
+		int age = 20;
+		boolean isStudent = true;
+		
+		myObject.Ferson(name, age, isStudent);
+		
+		String output1 = myObject.getName();
+		int output2 = myObject.getAge();
+		boolean output3 = myObject.getStudent();
+		
+		System.out.println(output1);
+		System.out.println("Age: " + output2);
+		System.out.println("Student? " + output3); 
+		 */
+		
+		//With User Input
+		
+		Person myObject = new Person();
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter name: ");
+		String entry1 = scan.nextLine();
+		
+		System.out.println("Enter age: ");
+		int entry2 = scan.nextInt();
+		
+		System.out.println("Are you a student: \nType true or false");
+		boolean entry3 = scan.nextBoolean();
+		
+		if(entry3 == true) {
+			
+			myObject.Person(entry1, entry2, entry3);
+			
+			String name = myObject.getName();
+			int age = myObject.getAge();
+			boolean isStudent = myObject.getStudent();
+			
+			System.out.println();
+			System.out.println(name);
+			System.out.println("Age: " + age);
+			System.out.println("Student: " + isStudent);
+	
+		}else if(entry3 == false){
+			System.out.println("Outsiders are not allowed");
+			
+		}
+	}
+}
