@@ -1,9 +1,10 @@
 package learningJava;
 import java.util.Scanner;
 
-public class Main {
-	
-	public static void main(String[] args) {
+public class Main
+{
+	public static void main(String[] args) 
+	{
 
 		//connect the classes altogether
 		//apply scanner	
@@ -19,7 +20,8 @@ public class Main {
 		System.out.println("Choose an operator: ");
 		String choices = scan.nextLine();
 		
-		switch(choices) {
+		switch(choices)
+		{
 		
 		case "+":
 			System.out.println("Enter First Number: ");
