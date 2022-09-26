@@ -1,31 +1,37 @@
 package learningJava;
 
-public class Person{
+public class Person
+{
 	
 	//create instance variables
+	
 	 String name;
 	 int age = 0;
 	 boolean isStudent;
 	
 	//create constructor method
-	public void Person(String name, int age, boolean isStudent) {
-		
+	
+	public void Person(String name, int age, boolean isStudent)
+	{
 		this.name = name;
 		this.age = age;
 		this.isStudent = isStudent;
 	}
 	
 	//create behavioral method
+	
 	public String getName() 
 	{	
 		return ("Name: " + this.name);
 	}
+	
 	public int getAge()
 	{	
 		return this.age;
 	}
-	public boolean getStudent() {
-		
+	
+	public boolean getStudent() 
+	{
 		return this.isStudent;
 	}
 }
