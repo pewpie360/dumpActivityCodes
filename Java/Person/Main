@@ -1,9 +1,10 @@
 package learningJava;
 import java.util.*;
 
-public class Main {
-	
-	public static void main(String[] args) {
+public class Main 
+{
+	public static void main(String[] args)
+	{
 		
 		//Without User input
 		/*
@@ -38,7 +39,8 @@ public class Main {
 		System.out.println("Are you a student: \nType true or false");
 		boolean entry3 = scan.nextBoolean();
 		
-		if(entry3 == true) {
+		if(entry3 == true) 
+		{
 			
 			myObject.Person(entry1, entry2, entry3);
 			
@@ -51,7 +53,10 @@ public class Main {
 			System.out.println("Age: " + age);
 			System.out.println("Student: " + isStudent);
 	
-		}else if(entry3 == false){
+		}
+		
+		else if(entry3 == false)
+		{
 			System.out.println("Outsiders are not allowed");
 			
 		}
