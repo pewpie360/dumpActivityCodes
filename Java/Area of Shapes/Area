@@ -20,6 +20,7 @@ public class Area {
 		
 		area = 3.14159 * Math.pow(radius, 2);
 	}
+	
 	public double getTriangle() {
 		
 		return area;
