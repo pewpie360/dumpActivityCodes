@@ -1,0 +1,75 @@
+package learningJava;
+import java.util.*;
+
+public class Main {
+	
+	public static void main(String[] args) {
+	
+		/*
+		 Area of Triangle, Circle, Parallelogram, 
+		 Trapezoid, Ellipse, Sector, Trapezoid, Rectangle
+		 * */
+
+		Scanner scan = new Scanner(System.in);
+		
+		Area myObject = new Area();
+		
+		System.out.println("Choose:\na) Area of Triangle\nb) Area of Rectangle\nc) Area of Square\nd) Area of Circle");
+		String choices = scan.nextLine();
+		
+		switch(choices) {
+		
+		case "a":
+			
+			System.out.println("Enter base: ");
+			double input1 = scan.nextDouble();
+			
+			System.out.println("Enter height: ");
+			double input2 = scan.nextDouble();
+			
+			myObject.Triangle(input1, input2);
+			double area1 = myObject.getTriangle();
+			
+			System.out.println("Area of a Triangle: " + area1);
+			break;
+			
+		case "b":
+			
+			System.out.println("Enter width: ");
+			double input3 = scan.nextDouble();
+			
+			System.out.println("Enter height: ");
+			double input4 = scan.nextDouble();
+			
+			myObject.Rectangle(input3, input4);
+			double area2 = myObject.getRectangle();
+			
+			System.out.println("Area of Rectangle: " + area2);
+			break; 
+			
+		case "c":
+			
+			System.out.println("Enter an angle: ");
+			double input5 = scan.nextDouble();
+			
+			myObject.Square(input5);
+			double area3 = myObject.getSquare();
+			
+			System.out.println("Area of Square: " + area3);
+			break;
+			
+		case "d":
+			
+
+			System.out.println("Enter radius: ");
+			double input6 = scan.nextDouble();
+			
+			myObject.Circle(input6);
+			double area4 = myObject.getCircle();
+			
+			System.out.println("Area of Circle: " + area4);
+			break;
+
+		}
+	}
+}
