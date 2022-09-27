@@ -1,0 +1,39 @@
+package learningJava;
+
+public class Area {
+	
+	double area = 0;
+	
+	public void Rectangle(double width, double height) {
+		
+		area = width * height;
+	}
+	public void Triangle(double base, double height) {
+		
+		area = 0.5 * base * height;
+	}
+	public void Square(double angle) {
+		
+		area = angle * angle;
+	}
+	public void Circle(double radius) {
+		
+		area = 3.14159 * Math.pow(radius, 2);
+	}
+	public double getTriangle() {
+		
+		return area;
+	}
+	public double getRectangle() {
+		
+		return area;
+	}
+	public double getSquare() {
+		
+		return area;
+	}
+	public double getCircle() {
+		
+		return area;
+	}
+}
