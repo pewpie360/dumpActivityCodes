@@ -1,96 +1,99 @@
-package learningJava;
+package main;
 import java.util.Scanner;
 
-public class Main
-{
-	public static void main(String[] args) 
+public class Main {
+	
+	public static void main(String[] args)
 	{
-
-		//connect the classes altogether
-		//apply scanner	
-		//create 5 choices operator
-		//Create firstNum and secondNum 5 repeated
-		//pass the firstNum and secondNum to x and y in Calculator class file
-		//pass the result to getSum
-		//print it out
 		
-		Calculator myObject = new Calculator();
+		do
+		{
 		Scanner scan = new Scanner(System.in);
+		Calculator myObject = new Calculator();
 		
-		System.out.println("Choose an operator: ");
+		System.out.println("\nChoose operator: \n(1)Addition\n(2)Subtraction\n(3)Multiplication\n(4)Division\n(5)Remainder\n\nPress any key to exit");
 		String choices = scan.nextLine();
 		
 		switch(choices)
 		{
 		
-		case "+":
-			System.out.println("Enter First Number: ");
-			double firstNum1 = scan.nextDouble();
+		case "1": 
 			
-			System.out.println("Enter Second Number: ");
-			double secondNum1 = scan.nextDouble();
+			System.out.println("Enter first Number");
+			int firstNum1 = scan.nextInt();
 			
-			myObject.Calculator1(firstNum1, secondNum1);
-			double result1 = myObject.getSum();
+			System.out.println("Enter second number: ");
+			int secondNum1 = scan.nextInt();
 			
-			System.out.println("Result: " + result1);
+			myObject.addCalculator(firstNum1, secondNum1);
+			
+			int sum1 = myObject.getSum();
+			System.out.println("Result: " + sum1);
+			
 			break;
 			
-		case "-":
-			System.out.println("Enter First Number: ");
-			double firstNum2 = scan.nextDouble();
+		case "2":
 			
-			System.out.println("Enter Second Number: ");
-			double secondNum2 = scan.nextDouble();
+			System.out.println("Enter first Number");
+			int firstNum2 = scan.nextInt();
 			
-			myObject.Calculator2(firstNum2, secondNum2);
-			double result2 = myObject.getSum();
+			System.out.println("Enter second number: ");
+			int secondNum2 = scan.nextInt();
 			
-			System.out.println("Result: " + result2);
+			myObject.subtractCalculator(firstNum2, secondNum2);
+			
+			int sum2 = myObject.getSum();
+			System.out.println("Result: " + sum2);
 			break;
 			
-		case "*":
-			System.out.println("Enter First Number: ");
-			double firstNum3 = scan.nextDouble();
+		case "3":
 			
-			System.out.println("Enter Second Number: ");
-			double secondNum3 = scan.nextDouble();
+			System.out.println("Enter first Number");
+			int firstNum3 = scan.nextInt();
 			
-			myObject.Calculator3(firstNum3, secondNum3);
-			double result3 = myObject.getSum();
+			System.out.println("Enter second number: ");
+			int secondNum3 = scan.nextInt();
 			
-			System.out.println("Result: " + result3);
+			myObject.multiplyCalculator(firstNum3, secondNum3);
+			
+			int sum3 = myObject.getSum();
+			System.out.println("Result: " + sum3);
 			break;
 			
-		case "/":
-			System.out.println("Enter First Number: ");
-			double firstNum4 = scan.nextDouble();
+		case "4":
 			
-			System.out.println("Enter Second Number: ");
-			double secondNum4 = scan.nextDouble();
+			System.out.println("Enter first Number");
+			int firstNum4 = scan.nextInt();
 			
-			myObject.Calculator4(firstNum4, secondNum4);
-			double result4 = myObject.getSum();
+			System.out.println("Enter second number: ");
+			int secondNum4 = scan.nextInt();
 			
-			System.out.println("Result: " + result4);
+			myObject.divideCalculator(firstNum4, secondNum4);
+			
+			int sum4 = myObject.getSum();
+			System.out.println("Result: " + sum4);
+			break;
+			
+		case "5":
+			
+			System.out.println("Enter first Number");
+			int firstNum5 = scan.nextInt();
+			
+			System.out.println("Enter second number: ");
+			int secondNum5 = scan.nextInt();
+			
+			myObject.remainderCalculator(firstNum5, secondNum5);
+			
+			int sum5 = myObject.getSum();
+			System.out.println("Result: " + sum5);
 			break;
 		
-		case "%":	
-			System.out.println("Enter First Number: ");
-			double firstNum5 = scan.nextDouble();
-			
-			System.out.println("Enter Second Number: ");
-			double secondNum5 = scan.nextDouble();
-			
-			myObject.Calculator5(firstNum5, secondNum5);
-			double result5 = myObject.getSum();
-			
-			System.out.println("Result: " + result5);
-			break;
-			
 		default:
 			
-			System.out.println("Invalid Choices \n Try Again");
-		}
+			System.out.println("Program has stop");
+			return;
+			
+			}
+		}while(true);
 	}
 }
