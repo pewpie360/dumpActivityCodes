@@ -3,42 +3,34 @@ package learningJava;
 public class Calculator
 {
 	
-	//Step 1: Create a instance variables
+	public int sum = 0;
 	
-	private double x =  0;
-	private double y = 0;
-	private double sum = 0;
-	
-	//Step 2: Create a Constructor Method
-	
-	public void Calculator1(double x, double y) 
+	public void addCalculator(int x, int y) 
 	{	
-		 sum = x + y;
+		sum = x + y;
 	}
 	
-	public void Calculator2(double x, double y) 
+	public void subtractCalculator(int x, int y) 
 	{	
 		sum = x - y;
 	}
 	
-	public void Calculator3(double x, double y) 
-	{		
+	public void multiplyCalculator(int x, int y) 
+	{	
 		sum = x * y;
 	}
 	
-	public void Calculator4(double x, double y) 
-	{
+	public void divideCalculator(int x, int y) 
+	{	
 		sum = x / y;
 	}
 	
-	public void Calculator5(double x, double y) 
-	{
+	public void remainderCalculator(int x, int y) 
+	{	
 		sum = x % y;
 	}
 	
-	//Step 3: Create behavioral method
-	
-	public double getSum()
+	public int getSum() 
 	{
 		return sum;
 	}
