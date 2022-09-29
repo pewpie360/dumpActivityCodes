@@ -1,0 +1,27 @@
+	/*
+	Write a program that converts inches to cm (Formula 1 inch = 2.54cm)
+	- 1 user input
+	- Convert class 
+	    returns the result to main
+	- Main Class
+	    prints the result
+
+	*/
+	
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+	
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter a number: ");
+		double input = scan.nextDouble();
+		
+		System.out.println("Result: " + Convert.Conversion(input, input));
+		
+	}
+}
