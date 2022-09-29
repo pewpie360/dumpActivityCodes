@@ -1,0 +1,13 @@
+package main;
+
+public class Convert {
+	
+
+	public static double Conversion(double result, double inch) {
+		
+		result = inch * 2.54;
+		return result;
+		
+	}
+}
+
