@@ -1,0 +1,27 @@
+package main;
+import java.util.*;
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);						
+		
+		System.out.println("Enter name");
+		String fullName = scan.nextLine();
+		
+		System.out.println("Enter First number: ");
+		int firstNum = scan.nextInt();
+		
+		System.out.println("Enter Second number: ");
+		int secondNum = scan.nextInt();
+		
+		System.out.println(Calculator.Person(fullName) + "\n" );
+
+		System.out.println(firstNum + " + " + secondNum + " = " + Calculator.addCalculator(secondNum, firstNum, secondNum));
+		System.out.println(firstNum + " - " + secondNum + " = " + Calculator.subtractCalculator(secondNum, firstNum, secondNum));
+		System.out.println(firstNum + " * " + secondNum + " = " + Calculator.multiplyCalculator(secondNum, firstNum, secondNum));
+		System.out.println(firstNum + " / " + secondNum + " = " + Calculator.divideCalculator(secondNum, firstNum, secondNum));
+		System.out.println(firstNum + " % " + secondNum + " = " + Calculator.remainderCalculator(secondNum, firstNum, secondNum));
+
+	}
+}
