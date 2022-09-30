@@ -2,7 +2,7 @@ package learningJava;
 
 public class Area {
 	
-	double area = 0;
+	private double area = 0;
 	
 	public void Rectangle(double width, double height) {
 		
