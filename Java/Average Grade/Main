@@ -1,0 +1,63 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter Prefinal: ");
+		double prelim = sc.nextDouble();
+		
+		if(prelim == 0 || prelim >= 3.25) {
+			System.out.println("Invalid");
+			return;
+			
+		}else {
+			
+			Average.Prelim(prelim);
+		}
+		
+		System.out.print("Enter Midterm: ");
+		double mid = sc.nextDouble();
+		
+		if(mid == 0 || mid >= 3.25) {
+			System.out.println("Invalid");
+			return;
+			
+		}else {
+			Average.Midterm(mid);
+		}
+		
+		System.out.print("Enter Prefinal: ");
+		double prefinal = sc.nextDouble();
+		
+		if(prefinal == 0 || prefinal >= 3.25) 
+		{
+			System.out.println("Invalid");
+			return;	
+			
+		}else 
+		{
+			Average.Prefinal(prefinal);
+		}
+		
+		System.out.println("Enter Midterm");
+		double finals = sc.nextDouble();
+		
+		if(finals == 0 || finals >= 3.25) {
+			System.out.println("Invalid");
+			return;
+			
+		}else {
+			
+			Average.Finals(finals);
+			
+		}
+		
+		System.out.println("Average: " + Average.Avg(prelim, mid, finals, prefinal));
+		
+	}
+}
