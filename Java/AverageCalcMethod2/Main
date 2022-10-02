@@ -1,0 +1,52 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter name: ");
+		String input1 = sc.nextLine();
+		Students Name = new Students();
+		Name.setName(input1);
+	
+		System.out.println("Enter Student ID: ");
+		int input2 = sc.nextInt();
+		Students studentID = new Students();
+		studentID.setStudentID(input2);
+		
+		double count = 5;
+		double grade  = 0;
+		double sum = 0;
+		
+		for(int i = 0; i < count; i++) 
+		{
+			System.out.println("Enter subject grade no " + (i + 1) + " : ");
+			grade = sc.nextDouble();
+			sum += grade;
+		}
+		
+		Students countGrades = new Students();
+		countGrades.setAverageGrade(sum, grade);
+		
+		System.out.println(Name.getName());
+		System.out.println(studentID.getStudentID());
+		System.out.println("Average: " +  countGrades.getStudentID());
+		
+	}
+}
+
+/*
+ * 
+public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+*/
