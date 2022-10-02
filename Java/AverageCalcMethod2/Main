@@ -4,49 +4,28 @@ import java.util.Scanner;
 
 public class Main {
 	
-	public static void main(String[] args) {
-		
+	public static void main(String args[])
+	  {
+	   
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Enter name: ");
-		String input1 = sc.nextLine();
-		Students Name = new Students();
-		Name.setName(input1);
-	
-		System.out.println("Enter Student ID: ");
-		int input2 = sc.nextInt();
-		Students studentID = new Students();
-		studentID.setStudentID(input2);
+		String name = sc.nextLine();
 		
-		double count = 5;
-		double grade  = 0;
-		double sum = 0;
+		System.out.println("Enter Student ID:");
+		int id = sc.nextInt();
 		
-		for(int i = 0; i < count; i++) 
-		{
-			System.out.println("Enter subject grade no " + (i + 1) + " : ");
-			grade = sc.nextDouble();
-			sum += grade;
-		}
+		System.out.println("Enter five subject: ");
+		int subject1 = sc.nextInt();
+		int subject2 = sc.nextInt();
+		int subject3 = sc.nextInt();
+		int subject4 = sc.nextInt();
+		int subject5 = sc.nextInt();
 		
-		Students countGrades = new Students();
-		countGrades.setAverageGrade(sum, grade);
-		
-		System.out.println(Name.getName());
-		System.out.println(studentID.getStudentID());
-		System.out.println("Average: " +  countGrades.getStudentID());
-		
-	}
+		System.out.println("\nStudent Report Card\n");
+		System.out.println("Student name: " + Students.Name(name));
+		System.out.println("Student ID no: " + Students.StudentID(id));
+		System.out.println("\nAverage: "+ Students.CalculateAverage(subject1, subject2, subject3, subject4, subject5));
+		System.out.println(Students.getQualifications(subject1, subject2, subject3, subject4, subject5));
+	  }
 }
-
-/*
- * 
-public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-*/
