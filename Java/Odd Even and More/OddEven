@@ -1,0 +1,81 @@
+package main;
+
+public class OddEven {
+	
+	private String name;
+	
+	public String Person(String x) 
+	{		
+		this.name = x;
+		return "\nHello " +  name;
+	}
+	
+	public int AgeCheck(int x) 
+	{
+		
+		if(x > 18) 
+		{	
+			System.out.println("You're an Adult");
+		}
+		
+		else
+		{
+			System.out.println("Children below 18 are not allowed");
+			System.exit(0);
+		}
+		return x;
+	}
+	
+	public int CheckOddEven(int x) {
+		
+		if(x % 2 == 0) 
+		{
+			System.out.println(x + " is Even");
+			System.out.println();
+		}
+		
+		else
+		{
+			System.out.println(x  + " is Odd");
+			System.out.println();
+		}
+			
+			/*
+			 * Pwede ra pud if(x % 2 == 1) {   System.out.println("Its Odd");
+			 */
+			
+		return x;
+		}
+	
+	public String QuizGame(String answer) {
+		
+		switch(answer)
+    {
+		
+		case "A":
+			
+			System.out.println("Correct! You Have 10000 primogems (^ _ ^)");
+			break;
+			
+		case "B":
+			
+			System.out.println("Incorrect!  (0 _ 0)");
+			break;
+		
+		case "C":
+			
+			System.out.println("Incorrect!  (0 _ 0)");
+			break;
+			
+		case "D":
+			
+			System.out.println("Incorrect!  (0 _ 0)");
+			break;
+			
+		default:
+			
+			System.out.println("Invalid choice");
+		}
+		return answer;
+	}
+}
