@@ -21,16 +21,15 @@ public class Main {
 		for(int i = 0; i < grade.length; i++ )
 		{
 			double input1 = sc.nextInt();
-			String input2 = sc.nextLine();
 			myObj.setAverage(input1);
-			myObj.setInformation(input2, input2, input2, input2, input2, input2);
 			
 		}
+		
 		
 		//Output
 		Students.StudentName(name);
 		System.out.println(myObj.getAverage());
-		System.out.println(myObj.getInformation());
+		System.out.println(myObj.getQualifications());
 		
 	  }
 }
