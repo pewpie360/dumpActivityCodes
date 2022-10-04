@@ -6,26 +6,31 @@ public class Main {
 	
 	public static void main(String args[])
 	  {
-	   
+		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Enter name: ");
+		Students myObj = new Students();
+		
+		System.out.println("Enter Name: ");
 		String name = sc.nextLine();
 		
-		System.out.println("Enter Student ID:");
-		int id = sc.nextInt();
 		
-		System.out.println("Enter five subject: ");
-		int subject1 = sc.nextInt();
-		int subject2 = sc.nextInt();
-		int subject3 = sc.nextInt();
-		int subject4 = sc.nextInt();
-		int subject5 = sc.nextInt();
+		int[] grade = new int[5];
 		
-		System.out.println("\nStudent Report Card\n");
-		System.out.println("Student name: " + Students.Name(name));
-		System.out.println("Student ID no: " + Students.StudentID(id));
-		System.out.println("\nAverage: "+ Students.CalculateAverage(subject1, subject2, subject3, subject4, subject5));
-		System.out.println(Students.getQualifications(subject1, subject2, subject3, subject4, subject5));
+		System.out.println("Enter five subject");
+		for(int i = 0; i < grade.length; i++ )
+		{
+			double input1 = sc.nextInt();
+			String input2 = sc.nextLine();
+			myObj.setAverage(input1);
+			myObj.setInformation(input2, input2, input2, input2, input2, input2);
+			
+		}
+		
+		//Output
+		Students.StudentName(name);
+		System.out.println(myObj.getAverage());
+		System.out.println(myObj.getInformation());
+		
 	  }
 }
