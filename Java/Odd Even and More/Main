@@ -1,0 +1,33 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		OddEven myObj = new OddEven();
+		
+		System.out.println("At which of the following Liyue restaurants can you try Xiangling's cooking");
+		System.out.println("A. Wanmin Restaurant\nB. Wangsheng Funeral Parlor\nC. Liuli Pavilion\nD. Xinyue Kiosk");
+		String choices = sc.nextLine();
+		
+		System.out.println("Enter Name: ");
+		String name = sc.nextLine();
+		
+		System.out.println("Enter a number: ");
+		int num = sc.nextInt();
+		
+		System.out.println("How old are you?");
+		int ageNum = sc.nextInt();
+		
+		//Print the Output
+		System.out.println(myObj.Person(name));
+		myObj.QuizGame(choices);
+		myObj.AgeCheck(ageNum);
+		myObj.CheckOddEven(num);
+		
+	}
+}
