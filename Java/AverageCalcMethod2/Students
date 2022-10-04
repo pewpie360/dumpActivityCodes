@@ -4,7 +4,8 @@ public class Students{
 	
 	private double sum = 0;
 	private double avg  = 0;
-
+	private String input;
+	
 	//Calculate Average: Using getters and setters method
 	public double getAverage() 
 	{
@@ -12,24 +13,39 @@ public class Students{
 		return avg;
 	}
 	
-	public void setAverage(double x) {
-
+	public void setAverage(double x) 
+	{
 		sum += x;
 		avg = sum  / 5;
 	}
 	
-	//Show Information: Using static method inspired by Lodi Niel XD
-	public static String StudentName(String name) {
-		return "Hello " + name;
+	public String StudentName(String name)
+	{		
+		return "\nHello " + name;
 	}
 	
-	public double getQualifications() {
+	//ga return Null
+	public String getInformation() 
+	{
+		return input;
+	}
+	
+	//ga Return Null
+	public void setInformation(String a, String b, String c, String d, String e) {
+	   
+		input = a + b + c + d + e;
+	}
+	
+	public double getQualifications()
+	{
 		
-		if(avg > 75) {
-			
+		if(avg > 75) 
+		{
 			System.out.println("Congratz m8, Proceed to the next level");
-		}else {
-			
+		}
+		
+		else 
+		{
 			System.out.println("Damn you fail this time m8");
 		}
 		return 0;
