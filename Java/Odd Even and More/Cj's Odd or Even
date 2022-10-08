@@ -1,0 +1,31 @@
+package javaControlStructures;
+import java.util.*;
+public class act3_Oop {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		//this class is used to get user input, and it is found in the java.util package
+		
+		System.out.println("Christian Jay Baguio | DS2A\n");
+		
+		System.out.println("Please input num: ");
+		int f_num = sc.nextInt();
+		
+		/* Checking if number is even or odd number
+         via remainder */
+		//using if-else-if statement
+		if (f_num % 2 == 0) {
+			//If remainder is zero then this number is even
+			System.out.println("This is even num");
+		}
+			//if the remainder is one then this number is odd
+		else if (f_num % 2 == 1) {
+			System.out.println("This is odd num");
+		}
+		else {
+			//if the user input 0 then the else will be executed
+			System.out.println("this is zero");
+		}
+    }
+    }
