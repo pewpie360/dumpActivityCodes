@@ -1,0 +1,48 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main 
+{
+	
+	public static void main(String[] args)
+	{
+		  Scanner console = new Scanner(System.in);
+		     
+	        double base;
+	        double power = 2;
+	        double result = 1;
+	        double area = 0;
+	        char choice;
+	       
+	        do {
+	        	
+	        	System.out.print("Enter the base number ");
+		        base = console.nextDouble();
+		        
+	        	if(base <  0.0) 
+	        	{
+		        	System.out.println("Invalid input");
+		        	return;
+		        }
+	        	
+	        	else
+		        {
+		        	for(int i = 1; i <= power; i++)
+		        	{
+		   		    result *= base;
+		   		    area = result * 3.14159;
+		   		    //double area = 3.14159 * Math.pow(num, 2);
+		   	        }
+		        	
+		        	System.out.println(area);
+		        	System.out.print("Do you want to continue y/n? ");
+		            choice = console.next().charAt(0);
+		            
+		        }
+	        }while(choice=='y' || choice == 'Y');
+	        System.out.println("End Program");
+	    }
+}
+
+//https://www.beginwithjava.com/java/loops/questions.html
