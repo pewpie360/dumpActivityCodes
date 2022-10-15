@@ -1,63 +1,42 @@
 package main;
 
-import java.util.Scanner;
-
-public class Main {
+public class Person{
 	
-	public static void main(String[] args) {
+	private double sum = 0;
+	private double avg  = 0;
+	private String input;
+	
+	//Calculate Average: Using getters and setters method
+	public double getAverage() 
+	{
+		System.out.print("Average Grade:");
+		return avg;
+	}
+	
+	public void setAverage(double x) 
+	{
+		sum += x;
+		avg = sum  / 5;
+	}
+	
+	public String StudentName(String name)
+	{		
+		return ("\nStudent Name: " + name);
+	}
+	
+	public int Qualifications()
+	{
 		
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.print("Enter Prefinal: ");
-		double prelim = sc.nextDouble();
-		
-		if(prelim == 0 || prelim >= 3.25) {
-			System.out.println("Invalid");
-			return;
-			
-		}else {
-			
-			Average.Prelim(prelim);
+		if(avg < 75) 
+		{	
+			System.out.println("You Have Failed This Time");	
 		}
 		
-		System.out.print("Enter Midterm: ");
-		double mid = sc.nextDouble();
-		
-		if(mid == 0 || mid >= 3.25) {
-			System.out.println("Invalid");
-			return;
-			
-		}else {
-			Average.Midterm(mid);
-		}
-		
-		System.out.print("Enter Prefinal: ");
-		double prefinal = sc.nextDouble();
-		
-		if(prefinal == 0 || prefinal >= 3.25) 
+		else
 		{
-			System.out.println("Invalid");
-			return;	
-			
-		}else 
-		{
-			Average.Prefinal(prefinal);
+			System.out.println("Congratulations! Proceed to the next level");
 		}
-		
-		System.out.println("Enter Midterm");
-		double finals = sc.nextDouble();
-		
-		if(finals == 0 || finals >= 3.25) {
-			System.out.println("Invalid");
-			return;
-			
-		}else {
-			
-			Average.Finals(finals);
-			
-		}
-		
-		System.out.println("Average: " + Average.Avg(prelim, mid, finals, prefinal));
-		
+		return 0;
 	}
 }
+	
