@@ -9,29 +9,35 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		Students myObj = new Students();
+		Person myObj = new Person();
 		
-		System.out.println("Enter Name: ");
+		System.out.println("Enter Student Name: ");
 		String name = sc.nextLine();
-		
 		
 		int[] grade = new int[5];
 		
 		System.out.println("Enter five subject");
-		for(int i = 0; i < grade.length; i++ )
+		for(int i = 0; i < grade.length; i++)
 		{
-			double input1 = sc.nextInt();
-			String input2 = sc.nextLine();
-			myObj.setAverage(input1);
-			//Ga return null 
-			myObj.setInformation(input2, input2, input2, input2, input2);
+			grade[i] = sc.nextInt();
+			myObj.setAverage(grade[i]);
+			
 		}
 		
 		//Output
 		System.out.println(myObj.StudentName(name));
+		
+		for(int i = 0; i < grade.length;) {
+			
+			for(int j = 1; j <= 5; j++) {
+				
+				System.out.println("Subject "+  j + " : " + grade[i]);
+				
+			}break;
+		}
+		
 		System.out.println(myObj.getAverage());
-		System.out.println(myObj.getInformation());
-		System.out.println(myObj.getQualifications());
+		System.out.println(myObj.Qualifications());
 		
 	  }
 }
