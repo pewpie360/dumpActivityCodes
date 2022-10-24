@@ -1,0 +1,52 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		char choice;
+		double[] grade = new double[5];
+		double sum = 0, average = 0;
+		
+		do {
+			
+			System.out.println("Enter five grade subject: ");
+			for(int i = 0; i < grade.length; i++) {
+				
+				grade[i] = input.nextDouble();
+				sum += grade[i];
+				average = sum / 5;
+				
+			}
+			
+			System.out.print("Subject 1: ");
+			System.out.println(grade[0] + "\n");
+			System.out.print("Subject 2: ");
+			System.out.println(grade[1] + "\n");
+			System.out.print("Subject 3: ");
+			System.out.println(grade[2] + "\n");
+			System.out.print("Subject 4: ");
+			System.out.println(grade[3] + "\n");
+			System.out.print("Subject 5: ");
+			System.out.println(grade[4] + "\n");
+			
+			System.out.println("Average: " +  average);
+			
+			//Weird kay mu add up double hinoon ang output
+			System.out.println("Do you want to continue? ");
+			choice = input.next(".").toUpperCase().charAt(0);
+			
+		}while(choice == 'Y');
+		
+		if(choice == 'N') {
+			
+			System.out.println("Thank You Come Again uwu");
+			System.exit(0);
+		}
+	}
+}
+
