@@ -1,0 +1,45 @@
+package main;
+
+import java.util.*;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter first Dimension");
+		int firstD = sc.nextInt();
+		
+		System.out.println("Enter second Dimension");
+		int secondD = sc.nextInt();
+		
+		System.out.println("Enter third Dimension");
+		int thirdD = sc.nextInt();
+		
+		int[][][] table = new int[firstD][secondD][thirdD];
+		
+		System.out.println("Enter values");
+		for(int i= 0; i < firstD; i++) {
+			for(int j = 0; j < secondD; j++) {
+				for(int k = 0; k < thirdD; k++){
+					
+					table[i][j][k] = sc.nextInt();
+					
+				}
+			}
+		}
+		
+		for(int i= 0; i < firstD; i++) {
+			for(int j = 0; j < secondD; j++) {
+				for(int k = 0; k < thirdD; k++){
+					
+					System.out.print(table[i][j][k] + " ");
+					
+				}
+				
+			}
+			System.out.println();
+		}
+ 	}
+}
