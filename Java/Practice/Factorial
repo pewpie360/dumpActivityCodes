@@ -1,0 +1,19 @@
+package Practice;
+import java.util.*;
+
+public class main 
+{
+	public static void main(String[] args) 
+	{
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter number");
+	int num = sc.nextInt();
+	sc.close();
+	
+	int factorial = num;
+	for(int x = num; x > 1; --x) {
+		factorial *= x-1;
+	}
+	System.out.println("The factorial of the number is " + factorial);
+	}
+}
