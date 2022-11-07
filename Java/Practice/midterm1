@@ -1,0 +1,25 @@
+package learningJava;
+import java.util.*;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		int x=0, ans =0;
+		
+		do {
+			
+			ans += x;
+			System.out.println(ans);  
+			x++;
+			/*
+			 * 0 1 3 6 10 15 
+			 * 0-1 = 1
+			 * 1-3 = 2
+			 * 3-6 = 3
+			 * 6-10 = 4
+			 * 10-15 = 5
+			 * */
+		}while(x < 6);
+	}
+}
