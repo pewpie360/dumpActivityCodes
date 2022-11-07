@@ -1,0 +1,18 @@
+package learningJava;
+import java.util.*;
+
+//Problem 1: Declare a method addNumbers that returns int sum of two int
+
+public class Main {
+	
+	static int addNumbers(int x, int y) 
+	{
+		int sum = x + y;
+		System.out.println(sum);
+		return sum;
+	}
+	public static void main(String[] args)
+	{
+		addNumbers(3,3);
+	}
+}
