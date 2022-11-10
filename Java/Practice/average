@@ -1,0 +1,47 @@
+package practice;
+import java.util.*;
+
+public class op {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int i, sum = 0, avg = 0;
+		
+		double[] grade = new double[5];
+		
+		System.out.println("Enter numbers: ");
+		for(i=0; i < grade.length; i++) 
+		{
+			
+			grade[i] = sc.nextDouble();
+			
+			if(grade[i] >= 5)
+			{	
+				System.out.println("Exceed above 5 is not Allowed");
+				return;
+			}
+			
+			if(grade[i] == 0)
+			{	
+				System.out.println("Not below 0");
+				return;
+			}
+			avg = (sum += grade[i]) / 5;
+		}
+		
+	
+		System.out.println("Average: " + avg);
+		
+		if(avg >= 3) 
+		{
+			System.out.println("You failed!");
+		}
+		
+		else
+		{
+			System.out.println("You passed!");
+		}
+		
+	}
+}
