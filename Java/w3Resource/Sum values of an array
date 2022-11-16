@@ -1,0 +1,63 @@
+package learningJava;
+import java.util.*;
+
+//Problem 1: Declare a method addNumbers that returns int sum of two int
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		//METHOD 1
+		 int[] arr = {1,2,3,4,5,6,7,8,9};
+		 int sum = 0;
+		 
+		 System.out.println("Before: " 
+		 + Arrays.toString(arr)
+		 .replace(",", "")
+		 .replace("[", "")
+		 .replace("]", ""));
+		 Arrays.sort(arr);
+		 for(int i : arr)
+		 {
+		 sum += i; 
+		 }
+		 
+		 System.out.println("After: " 
+		 + Arrays.toString(arr)
+		 .replace(",", "")
+		 .replace("[", "")
+		 .replace("]", ""));
+		 System.out.println("Sum of Arrays: " + sum + "\n");
+		
+		//METHOD 2: User Input
+		char opt = 'Y';
+
+		do 
+		{
+			int sum1 = 0;
+			System.out.println("Enter number");
+			int n = sc.nextInt();
+			
+			int[] arrayValue = new int[n];
+			
+			System.out.println("Enter values");
+			for(int i : arrayValue) 
+			{
+				
+				arrayValue[i] = sc.nextInt();
+				sum1 += arrayValue[i];
+	
+			}
+			
+			System.out.println("Sum of Arrays: " + sum1);
+			
+		System.out.println("Do you want to continue? Y|N");
+		opt = sc.next().toUpperCase().charAt(0);
+		
+		}while(opt == 'Y');
+		
+		System.out.println("Thank u come again");
+	}
+}
