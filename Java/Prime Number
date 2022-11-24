@@ -1,0 +1,36 @@
+package Practice;
+import java.util.*;
+import java.util.Collections;
+public class Method {
+	
+	
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int[] num = new int[5];
+		int i;
+		
+		System.out.println("Enter number");
+		for(i=0; i< num.length; i++) 
+		{	
+			num[i] = sc.nextInt();	
+		}
+		
+		System.out.println();
+		for(i=0; i< num.length; i++) {
+			
+			if((num[i] % 2 == 1) || (num[i] == 2)) {
+				
+				System.out.println(num[i] + " is a prime number");
+				
+			}else 
+			{	
+				System.out.println(num[i] + " is not prime number");
+			}
+			
+			}
+		}
+	}
+
