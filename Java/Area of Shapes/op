@@ -1,0 +1,106 @@
+package practice;
+import java.util.*;
+
+
+/* 
+ * Area of Rectangle
+ * Area of Square
+ * Area of Circle
+ * Area of Triangle
+ */
+
+public class op {
+	
+	private double area = 0;
+	
+	public double Rectangle(double l, double w)
+	{
+		return area =  l * w;
+	}
+	
+	public double Circle(double r) 
+	{
+		return area = (double) (3.14 * Math.pow(r, 2));
+	}
+	
+	public double Square(double x) 
+	{
+		return area = Math.pow(x, 2);	
+	}
+	
+	public double Triangle(double b, double h) 
+	{
+		return area = (0.50) * b * h;	
+		//	return area = (b * h) / 2;	
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		op calculateShapes = new op();
+		
+		char opt = 'Y';
+		
+		do {
+			
+			System.out.println("Please choose a letter\na)Area of Circle\nb)Area of Rectangle\nc)Area of Square\nd)Area of Triangle");
+			opt = sc.next().toUpperCase().charAt(0);
+
+			switch(opt) {
+			
+			case 'A':
+				
+				System.out.println("Enter radius: ");
+				double radius = sc.nextDouble();
+				
+				System.out.println("Area of Circle:  " +  calculateShapes.Circle(radius));
+				break;
+			
+			case 'B':
+				
+				System.out.print("Enter length: ");
+				double length = sc.nextDouble();
+				
+				System.out.print("Enter width:");
+				double width = sc.nextDouble();
+				
+				System.out.println("Area of Rectangle: " + calculateShapes.Rectangle(length, width));
+				break;
+				
+			case 'C':
+				
+				System.out.print("Enter side of Square: ");
+				double x = sc.nextDouble();
+				
+				System.out.print("Area of Square:  " +  calculateShapes.Square(x));
+				break;
+			
+			case 'D':
+				
+				System.out.print("Enter base: ");
+				double base = sc.nextDouble();
+				
+				System.out.print("Enter height: ");
+				double height = sc.nextDouble();
+				
+				System.out.println("Area of Triangle: " + calculateShapes.Triangle(base, height));
+				break;
+				
+			default:
+				System.out.println("Invalid input");
+				break;
+			}	
+			
+				System.out.println("\nDo you want to continue? Type Y to continue Type n to stop");
+				opt = sc.next().charAt(0);
+				
+				if(opt == 'N' || opt == 'n') 
+				{	
+					System.out.println("Program Ended");
+					return;	
+				}
+				
+		}while(opt == 'Y' || opt == 'y');
+	}
+}
