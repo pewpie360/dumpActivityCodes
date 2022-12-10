@@ -1,0 +1,53 @@
+package practice;
+import java.util.Scanner;
+
+class Area{
+	
+	static class Rectangle{
+		
+		public void display(int l, int w) {
+			
+			System.out.println("Area of Rectangle: " + l * w);
+		}
+	}
+	
+	static class Square{
+		
+		public void display(int x) {
+			
+			System.out.println("Area of Square: " +  Math.pow(x, 2));
+		}
+	}
+	
+	static class Circle {
+		
+		public void display(int r) {
+			
+			System.out.println("Area of Circle: " +  (Math.PI) * Math.pow(r, 2));
+		}
+	}
+	
+	static class Triangle{
+		
+		public void display(int b, int h) {
+			
+			System.out.println("Area of Triangle: " +  (0.50) * b * h);
+		}
+	}
+}
+public class Main {
+	public static void main(String[] args) {
+		
+		Area.Rectangle compute = new Area.Rectangle();
+		compute.display(2, 4);
+		
+		Area.Square compute1 = new Area.Square();
+		compute1.display(2);
+		
+		Area.Circle compute2 = new Area.Circle();
+		compute2.display(1);
+		
+		Area.Triangle compute3 = new Area.Triangle();
+		compute3.display(5, 5);
+	}
+}
