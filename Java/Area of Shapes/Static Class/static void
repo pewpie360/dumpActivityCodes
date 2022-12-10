@@ -1,0 +1,91 @@
+package practice;
+import java.util.Scanner;
+
+class Area{
+	
+	static class Rectangle{
+		
+		public static void display(int l, int w) {
+			
+			System.out.println("Area of Rectangle: " + l * w);
+		}
+	}
+	
+	static class Square{
+		
+		public static void display(int x) {
+			
+			System.out.println("Area of Square: " +  Math.pow(x, 2));
+		}
+	}
+	
+	static class Circle {
+		
+		public static void display(int r) {
+			
+			System.out.println("Area of Circle: " +  (Math.PI) * Math.pow(r, 2));
+		}
+	}
+	
+	static class Triangle{
+		
+		public static void display(int b, int h) {
+			
+			System.out.println("Area of Triangle: " +  (0.50) * b * h);
+		}
+	}
+}
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Choose an area \na)Rectangle\nb)Circle\nc)Triangle\nd)Square");
+		char opt = sc.next().toUpperCase().charAt(0);
+		
+		switch(opt) {
+		
+		case 'A':
+			
+			System.out.println("Enter length: ");
+			int length = sc.nextInt();
+			
+			System.out.println("Enter width: ");
+			int width = sc.nextInt();
+			
+			Area.Rectangle.display(length, width);
+			break;
+			
+		case 'B':
+			
+			System.out.println("Enter radius: ");
+			int radius = sc.nextInt();
+			
+			Area.Circle.display(radius);
+			break;
+			
+		case 'C':
+			
+			System.out.println("Enter base: ");
+			int base = sc.nextInt();
+			
+			System.out.println("Enter height: ");
+			int height = sc.nextInt();
+			
+			Area.Triangle.display(base, height);
+			break;
+			
+		case 'D':
+			
+			System.out.println("Enter number: ");
+			int x = sc.nextInt();
+			
+			Area.Square.display(x);
+			break;
+			
+		default:
+			
+			System.out.println("Invalid");
+		}
+	}
+}
