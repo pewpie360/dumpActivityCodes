@@ -1,0 +1,71 @@
+package practice;
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		char opt = 'Y';
+		
+		do {
+			
+			System.out.println("Choose an area \na)Rectangle\nb)Circle\nc)Triangle\nd)Square");
+			opt = sc.next().toUpperCase().charAt(0);
+		
+			switch(opt) {
+			
+			case 'A':
+				
+				System.out.println("Enter length: ");
+				int length = sc.nextInt();
+				
+				System.out.println("Enter width: ");
+				int width = sc.nextInt();
+				
+				System.out.println("Area of Rectangle: " +  Static.Rectangle(length, width));
+				break;
+				
+			case 'B':
+				
+				System.out.println("Enter radius: ");
+				int radius = sc.nextInt();
+				
+				System.out.println("Area of Circle: " +  Static.Circle(radius));
+				break;
+				
+			case 'C':
+				
+				System.out.println("Enter base: ");
+				int base = sc.nextInt();
+				
+				System.out.println("Enter height: ");
+				int height =  sc.nextInt();
+				
+				System.out.println("Area of Triangle: " + Static.Triangle(base, height));
+				break;
+				
+			case 'D':
+				
+				System.out.println("Enter number");
+				int x = sc.nextInt();
+				
+				System.out.println("Area of Square: " + Static.Square(x));
+				break;
+				
+			default:
+		
+				System.out.println("Invalid input");
+			}
+			
+			System.out.println("Do you want to continue? Y | N");
+			opt = sc.next().toUpperCase().charAt(0);
+			
+			if(opt == 'N') {
+				
+				System.out.println("Program Ends");
+				return;
+			}
+		}while(opt == 'Y' || opt == 'y');
+	}
+}
