@@ -1,0 +1,168 @@
+package Practice;
+import java.util.*;
+import java.lang.*;
+
+public class Method{
+
+	private double sum1, sum2, sum3, sum4, sum5;
+	
+	//gi manu manu select calculate by index
+	public void Add(double[] firstSet, double[] secondSet) {
+
+		sum1 = firstSet[0] + secondSet[0];
+		sum2 = firstSet[1] + secondSet[1];
+		sum3 = firstSet[2] + secondSet[2];
+		sum4 = firstSet[3] + secondSet[3];
+		sum5 = firstSet[4] + secondSet[4];
+	}
+
+	public void Multiply(double[] firstSet, double[] secondSet) {
+
+		sum1 = firstSet[0] * secondSet[0];
+		sum2 = firstSet[1] * secondSet[1];
+		sum3 = firstSet[2] * secondSet[2];
+		sum4 = firstSet[3] * secondSet[3];
+		sum5 = firstSet[4] * secondSet[4];
+	}
+
+	public double getSum1() {
+
+		return sum1;
+
+	}
+
+	public double getSum2() {
+
+		return sum2;
+
+	}
+
+	public double getSum3() {
+
+		return sum3;
+
+	}
+
+	public double getSum4() {
+
+		return sum4;
+
+	}
+
+	public double getSum5() {
+
+		return sum5;
+
+	}
+	
+//=========================================================================================================
+	public static void main(String[] args)
+	{
+		//automating of declaration of input and output of the i and j for loop
+		int i, j;
+
+		//Declaring for Scanner input
+		Scanner sc = new Scanner(System.in);
+
+		//Nag create ug calling method
+		Method myObj = new Method();
+
+		//Declare two separate array para ma distinguish sa pagcalculate
+		double[] firstSet = new double[5];
+		double[] secondSet = new double[5];
+
+		//FIRST SET INPUT
+		for(i=0; i < firstSet.length; i++)
+		{
+			System.out.print("Enter a number for 1st set: ");
+			firstSet[i] = sc.nextDouble();
+		}
+
+		//SECOND SET INPUT
+		System.out.println();
+		for(j=0; j < secondSet.length; j++)
+		{
+			System.out.print("Enter a number for 2nd set: ");
+			secondSet[j] = sc.nextDouble();
+		}
+
+		//GA INARTE, SUMBAGAY NALANG MI SA INSTRUCTOR JustKidding
+		System.out.println("\nOperation: (+)Addition     (*)Multiplication\n           (-)Subtraction (/)Division" );
+
+		//Choosing for Operator
+		System.out.print("\nEnter an Operator: ");
+		char opt = sc.next().toUpperCase().charAt(0);
+
+		//kabalo naka ani
+		switch(opt) {
+
+		case '+':
+
+			//Consider this as a setter method
+			myObj.Add(firstSet, secondSet);
+
+			//Display output for 1st Set
+			System.out.print("\nThe 1st set of numbers are: ");
+			for(i=0; i < firstSet.length; i++)
+			{
+				System.out.print(firstSet[i] + " ");
+
+			}
+
+			//Display output for 2nd Set
+			System.out.print("\nThe 2nd set of numbers are: ");
+			for(j=0; j < secondSet.length; j++)
+			{
+				System.out.print(secondSet[j] + " ");
+
+			}
+
+			//Display output for sum and applying also the getter method
+			System.out.print("\nThe sum of the numbers are: ");
+			System.out.print(myObj.getSum1());
+			System.out.print(" " + myObj.getSum2());
+			System.out.print(" " + myObj.getSum3());
+			System.out.print(" " + myObj.getSum4());
+			System.out.print(" " + myObj.getSum5());
+			break;
+
+		case '-':
+
+			break;
+
+		case '*':
+
+			myObj.Multiply(firstSet, secondSet);
+
+			System.out.print("\nThe 1st set of numbers are: ");
+			for(i=0; i < firstSet.length; i++)
+			{
+				System.out.print(firstSet[i] + " ");
+
+			}
+
+			System.out.print("\nThe 2nd set of numbers are: ");
+			for(j=0; j < secondSet.length; j++)
+			{
+				System.out.print(secondSet[j] + " ");
+
+			}
+
+			System.out.print("\nThe sum of the numbers are: ");
+			System.out.print(myObj.getSum1());
+			System.out.print(" " + myObj.getSum2());
+			System.out.print(" " + myObj.getSum3());
+			System.out.print(" " + myObj.getSum4());
+			System.out.print(" " + myObj.getSum5());
+			break;
+
+		case '/':
+			break;
+
+		default:
+
+			System.out.println("\nInvalid input");
+
+		}
+	}
+}
