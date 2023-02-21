@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <div id = "wrapper">
+        <header class = "borderstyle1">Header 1</header>
+        <header class="borderstyle1">Header 2</header> 
+    </div>
+
+    <section id = "content-area">
+        <aside class = "sidebar">
+            <div>
+                l1
+            </div>
+            <div>
+                l
+            </div>
+        </aside> 
+        
+        <main class="borderstyle2">Main</main> 
+        <aside2 class = "borderstyle2">SidebarRIght</aside2> 
+    </section>
+
+    <footer class = "borderstyle4">Footer</footer>
+</body>
+</html>
+
+
+body *{
+    display: flex;
+}
+
+.borderstyle1{
+    border: 2px solid #000;
+    flex-grow: 1;
+    margin: 5px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.borderstyle2{
+    border: 2px solid #000;
+    flex-grow: 1;
+    margin: 5px;
+
+}
+
+#content-area{
+    flex-wrap: wrap;
+}
+
+.borderstyle4{
+    border: 2px solid #000;
+    flex-grow: 1;
+    margin: 5px;
+    flex-direction: column;
+}
+
+.borderstyle0{
+    border: 2px solid #000;
+    flex-grow: 1;
+    margin: 5px;
+    flex-direction: column;
+}
+
+
+.borderstyle{
+    border: 2px solid #000;
+    flex-grow: 1;
+    margin: 5px;
+    flex-direction: column;
+}
+
+.borderstyle3{
+    border: 2px solid #000;
+    height: 100px;
+    margin: 5px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+#content-area{
+    height: 50vh;
+    flex-wrap: wrap;
+
+}
+
+#content-area aside{
+    flex-direction:row;
+  }
+
+#content-area aside{
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+
+.sidebar {
+    border: 2px solid #000;
+    flex-grow: 2;
+  }
+
+#content-area main{
+    flex-grow: 2;
+}
+
+#wrapper header{
+    flex-grow: 4;
+    height: 100px;
+}
+
+#wrapper header{
+    flex-grow: 4;
+}
+
+footer{
+   height:100px; 
+}
